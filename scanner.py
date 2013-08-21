@@ -6,8 +6,9 @@ import transmissionrpc
 import ConfigParser
 from TextMessage import SendText
 
+configPath = '/home/pi/Media-Scanner/scanner.cfg'
 config = ConfigParser.RawConfigParser()
-config.read('scanner.cfg')
+config.read(configPath)
 
 # Define the server which the torrent is stored on
 trpcUser = config.get('user-info', 'trpcUser')
