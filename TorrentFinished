@@ -1,0 +1,7 @@
+#/bin/sh
+
+# Run the scanner script
+python /home/pi/Media-Scanner/scanner.py
+
+# Update the sbmc library
+xbmc-send --action="UpdateLibrary(video)"

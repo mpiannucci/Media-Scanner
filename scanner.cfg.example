@@ -1,0 +1,9 @@
+[user-info]
+trpcUser = <transmission-username>
+trpcPassword = <transmission-password>
+
+[extras]
+textSender = <gmail-address>
+textPassword = <gmail-password>
+textNumber = <phone-number>
+
