@@ -36,61 +36,9 @@ for title in titles:
     tvshows[title[:3].lower()+'*'] = tvShowPath + title
     tvshows[title[:3].upper()+'*'] = tvShowPath + title
 
-"""
-# Set the file destinations
-famguyPath = '/media/MattsMedia/Media/TV Shows/Family Guy/'
-personPath = '/media/MattsMedia/Media/TV Shows/Person of Interest/'
-psychPath = '/media/MattsMedia/Media/TV Shows/Psych/'
-entouragePath = '/media/MattsMedia/Media/TV Shows/Entourage/'
-bbPath = '/media/MattsMedia/Media/TV Shows/Breaking Bad/'
-suitsPath = '/media/MattsMedia/Media/TV Shows/Suits/'
-modfamPath = '/media/MattsMedia/Media/TV Shows/Modern Family/'
-wdPath = '/media/MattsMedia/Media/TV Shows/The Walking Dead/'
-himymPath = '/media/MattsMedia/Media/TV Shows/How I Met Your Mother/'
-burnPath = '/media/MattsMedia/Media/TV Shows/Burn Notice/'
-gamePath = '/media/MattsMedia/Media/TV Shows/Game of Thrones/'
-arrestPath = '/media/MattsMedia/Media/TV Shows/Arrested Development/'
-gracePath = '/media/MattsMedia/Media/TV Shows/Graceland/'
-fbashPath = '/media/MattsMedia/Media/TV Shows/Franklin and Bash/'
-"""
-
 # Create list of extenstions
 movtypes = ["*.mp4", "*.avi", "*.mkv"]
 mustypes = ["*.mp3"]
-
-# Create the tv show dictionary
-"""
-tvshows = {
-    "fam*" : famguyPath,
-    "Fam*" : famguyPath,
-    "Person*" : personPath,
-    "person*" : personPath,
-    "psych*" : psychPath,
-    "Psych*" : psychPath,
-    "ent*" : entouragePath,
-    "Ent*" : entouragePath,
-    "break*" : bbPath,
-    "Break*" : bbPath,
-    "suit*" : suitsPath,
-    "Suit*" : suitsPath,
-    "modern*" : modfamPath,
-    "Modern*" : modfamPath,
-    "walk*" : wdPath,
-    "Walk*" : wdPath,
-    "how*" : himymPath,
-    "How*" : himymPath,
-    "burn*" : burnPath,
-    "Burn*" : burnPath,
-    "game*" : gamePath,
-    "Game*" : gamePath,
-    "arrest*" : arrestPath,
-    "Arrest*" : arrestPath,
-    "grace*" : gracePath,
-    "Grace*" : gracePath,
-    "franklin*" : fbashPath,
-    "Franklin*" : fbashPath
-}
-"""
 
 # Empty list for the matches to get copied too
 matches = []
