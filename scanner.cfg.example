@@ -2,8 +2,16 @@
 trpcUser = <transmission-username>
 trpcPassword = <transmission-password>
 
+[path]
+dlPath = <path-to-downloads>
+moviePath = <path-to-movies>
+musicPath = <path-to-music>
+tvShowPath = <path-to-tvshows>
+
 [extras]
 textSender = <gmail-address>
 textPassword = <gmail-password>
 textNumber = <phone-number>
 
+[tv-shows]
+allShows = list,of,tv,shows

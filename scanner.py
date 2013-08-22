@@ -20,11 +20,23 @@ textPassword = config.get('extras', 'textPassword')
 textNumber = config.get('extras', 'textNumber')
 textMessage = 'Torrents finished and scanned!'
 
-# Define where you want to look for files
-dlPath = '/media/MattsMedia/Downloads/'
-moviePath = '/media/MattsMedia/Media/Movies/'
-musicPath = '/media/MattsMedia/Media/Music/'
+# Get the path options
+dlPath = config.get('path', 'dlPath')
+moviePath = config.get('path', 'moviePath')
+musicPath = config.get('path', 'musicPath')
+tvShowPath = config.get('path', 'tvShowPath')
 
+# Get the tv shows from config file
+titles = config.get('tv-shows', 'allShows').split(',')
+tvshows = {
+    
+}
+
+for title in titles:
+    tvshows[title[:3].lower()+'*'] = tvShowPath + title
+    tvshows[title[:3].upper()+'*'] = tvShowPath + title
+
+"""
 # Set the file destinations
 famguyPath = '/media/MattsMedia/Media/TV Shows/Family Guy/'
 personPath = '/media/MattsMedia/Media/TV Shows/Person of Interest/'
@@ -40,12 +52,14 @@ gamePath = '/media/MattsMedia/Media/TV Shows/Game of Thrones/'
 arrestPath = '/media/MattsMedia/Media/TV Shows/Arrested Development/'
 gracePath = '/media/MattsMedia/Media/TV Shows/Graceland/'
 fbashPath = '/media/MattsMedia/Media/TV Shows/Franklin and Bash/'
+"""
 
 # Create list of extenstions
 movtypes = ["*.mp4", "*.avi", "*.mkv"]
 mustypes = ["*.mp3"]
 
 # Create the tv show dictionary
+"""
 tvshows = {
     "fam*" : famguyPath,
     "Fam*" : famguyPath,
@@ -76,6 +90,7 @@ tvshows = {
     "franklin*" : fbashPath,
     "Franklin*" : fbashPath
 }
+"""
 
 # Empty list for the matches to get copied too
 matches = []
