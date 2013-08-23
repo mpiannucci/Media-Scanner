@@ -35,8 +35,7 @@ tvshows = {
 }
 
 for title in titles:
-    tvshows[title[:3].lower()+'*'] = tvShowPath + title + '/'
-    tvshows[title[:3].upper()+'*'] = tvShowPath + title + '/'
+    tvshows[title[:3]+'*'] = tvShowPath + title + '/'
 
 # Create list of extenstions
 movtypes = ["*.mp4", "*.avi", "*.mkv"]
