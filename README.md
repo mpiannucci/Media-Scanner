@@ -8,9 +8,15 @@ A post download script used in conjunction with the transmission-daemon bittoren
 <h2>Dependencies</h2>
 <ul>
   <li>Python 2.7</li>
-  <li>transmissionrpc python module</li>
-  <li>transmission-daemon</li>
-  <li>xbmc tools</li>
+  <li>transmissionrpc python module
+    <code>sudo easy_install transmissionrpc</code>
+  </li>
+  <li>transmission-daemon
+    <code>sudo apt-get install transmission-daemon</code>
+  </li>
+  <li>xbmc tools
+    <code>sudo apt-get install xbmc-eventclients-xbmc-send</code>
+  </li>
 </ul>
 
 <h2>Instructions</h2>
