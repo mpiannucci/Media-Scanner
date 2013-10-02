@@ -28,7 +28,7 @@ A post download script used in conjunction with the transmission-daemon bittoren
   <li>Set the download folder and remember its path</li>
   <li>Set script-on-finish to true and the path to TorrentFinished as the file location</li>
   <li>Restart the service <code>sudo service transmission-daemon start</code></li>
-  <li>Set variables in scanner.py script as they apply to you <code>cp scanner.cfg.exampl scanner.cfg</code></li>
+  <li>Set variables in scanner.py script as they apply to you <code>cp scanner.cfg.example scanner.cfg</code></li>
   <li>Added a torrect via rpc or web interface and test!</li>
 </ul>
   
