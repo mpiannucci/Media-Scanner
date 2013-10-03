@@ -35,11 +35,15 @@ tvshows = {
 }
 
 for title in titles:
-    tvshows[title[:3]+'*'] = tvShowPath + title + '/'
+    titleTemp = title.split()
+    if titleTemp[0] == 'The':
+        tvshows['*' + titleTemp[1] +'*'] = tvShowPath + title + '/'
+    else:
+        tvshows[titleTemp[0] +'*'] = tvShowPath + title + '/'
 
 # Create list of extenstions
-movtypes = ["*.mp4", "*.avi", "*.mkv"]
-mustypes = ["*.mp3"]
+movtypes = ['*.mp4', '*.avi', '*.mkv']
+mustypes = ['*.mp3']
 
 # Empty list for the matches to get copied too
 matches = []
@@ -53,7 +57,7 @@ def MovieScan():
                 print(os.path.join(root, filename))
                 shutil.move(os.path.join(root, filename), os.path.join(moviePath, filename))
                 print color.GREEN + 'File succesfully moved!' + color.ENDC
-    print "Finished Scanning For Movies"
+    print 'Finished Scanning For Movies'
 
 def TvScan():
     """ Scan and move Tv Shows """
@@ -64,7 +68,7 @@ def TvScan():
                 print(os.path.join(root, filename))
                 shutil.move(os.path.join(root, filename), os.path.join(location, filename))
                 print color.GREEN + 'File succesfully moved!' + color.ENDC
-    print "Finished Scanning For TV Shows"
+    print 'Finished Scanning For TV Shows'
 
 def MusicScan():
     """ Scan and move music """
@@ -75,14 +79,14 @@ def MusicScan():
                 print(os.path.join(root, filename))
                 shutil.move(os.path.join(root, filename), os.path.join(musicPath, filename))
                 print color.GREEN + 'File succesfully moved!' + color.ENDC
-    print "Finished Scanning For Music"
+    print 'Finished Scanning For Music'
 
 def ScanAll():
     MusicScan()
     TvScan()
     MovieScan()
     SendText(textSender, textPassword, textNumber, textMessage)
-    print "Scan complete. Exiting.."
+    print 'Scan complete. Exiting..'
 
 def TorrentHandle():
     """ 
@@ -94,11 +98,11 @@ def TorrentHandle():
     for torrent in currentTorrents:
         if not torrent.status == 'downloading':
             tc.remove_torrent(torrent.hashString)
-            print "Torrent removed"
+            print 'Torrent removed'
         else:
-            print color.RED + "Error: " + torrent.status + color.ENDC
+            print color.RED + 'Error: ' + torrent.status + color.ENDC
             sys.exit(0)
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     TorrentHandle()
     ScanAll()
