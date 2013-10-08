@@ -1,3 +1,4 @@
 #ignore config files
 scanner.cfg
 tor.p
+*.pyc
