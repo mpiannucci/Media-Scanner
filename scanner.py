@@ -38,7 +38,7 @@ for title in titles:
     titleTemp = title.split('.')
     if len(titleTemp) == 1:
         titleTemp = titleTemp[0].split()
-    if (titleTemp[0] == 'The') | (titleTemp == 'the'):
+    if (titleTemp[0] == 'The') | (titleTemp[0] == 'the'):
         tvshows['*' + titleTemp[1] +'*'] = tvShowPath + title + '/'
     else:
         tvshows[titleTemp[0] +'*'] = tvShowPath + title + '/'
