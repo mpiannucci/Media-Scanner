@@ -70,6 +70,12 @@ def TvScan():
                 print(os.path.join(root, filename))
                 shutil.move(os.path.join(root, filename), os.path.join(location, filename))
                 print color.GREEN + 'File succesfully moved!' + color.ENDC
+            # Send the file through another filter in case of lower case filenames 
+            for filename in fnmatch.filter(filenames, key.lower()):
+                matches.append(os.path.join(root, filename))
+                print(os.path.join(root, filename))
+                shutil.move(os.path.join(root, filename), os.path.join(location, filename))
+                print color.GREEN + 'File succesfully moved!' + color.ENDC
     print 'Finished Scanning For TV Shows'
 
 def MusicScan():
